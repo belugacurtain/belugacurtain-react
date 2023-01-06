@@ -1,77 +1,70 @@
-### 2023. 01. 06. React Start with BelugaCurtain
-#### 학습시작
-#### React 구성(기본) / 디렉토리 / react-app / 하위목록
-<ul>
-<li>최상단 기본구성
-<ul>
-<li>/noe-modules/</li>    
-<li>/public/index.html</li>    
-<li>/src/
-<ul>
-<li>index.css</li>
-<li>index.js
+# Getting Started with Create React App
 
-    import React from 'react';
-    import ReactDom from 'react-dom';
-    import './index.css'; ----> /public/index.html에 정의
-    import App from './App.js'; ----> .js 생략가능
-    import * as serviceWorker from './serviceWorker.js';
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-    ReactDom.render(<App />, document.getElementById('root')); ----> /public/index.html 안에서 찾을 수 있음
-    serviceWorker.unregister();
-</li>
-<li>App.css</li>
-<li>App.js
+## Available Scripts
 
-    import React, {Component} from 'react'; ----> 사용자정의 태그인 컴포넌트를 사용할 수 있게 해주는 React 구문
-    import Header from "./components/Header";
-    
-    class App extends Component{
-        constructor(props){ ----> state를 사용하기 위해 state의 값의 초기화를 담당한다 , render 함수보다 먼저 실해되어야함
-            super(props);
-            this.state = {
-                header:{title:'gunami header', desc:'Hi React Start'}
-            }
-        }
-        render(){
-            return{
-                <꼭 최상단 태그 쓸 것>
-                    <Header title={this.state.header.title}></Header> ----> 만들어진 Header 컴포넌트 사용 후 state 로 정의된 props 사용
-                </꼭 최상단 태그 쓸 것>
-            };
-        }
-    }
-    
-    export default App; ----> 내가 만든 컴포넌트를 어디에서나 사용 할 수 있게 해주는 구문
-</li>
-<li>serviceWorker.js</li>
-<li>/components/
-<ul>
-<li>Header.js
+In the project directory, you can run:
 
-    import React, {Componet} from 'react';
-    
-    class Header extends Component{
-        render(){
-            return{
-                <꼭 최상단 태그 쓸 것>
-                    <header>
-                        <h1>{this.props.title}</h1>
-                        <div>
-                            {this.props.desc}
-                        </div>
-                    </header>
-                </꼭 최상단 태그 쓸 것>
-            };
-        }
-    }
+### `npm start`
 
-    export default Header;
-</li>
-</ul>
-</li>
-</ul>            
-</li>
-</ul>    
-</li>
-</ul>
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

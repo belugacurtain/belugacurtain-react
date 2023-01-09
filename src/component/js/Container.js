@@ -1,5 +1,3 @@
-import Header from "./Header";
-
 function Container(props) {
     return (
         <div id="container">

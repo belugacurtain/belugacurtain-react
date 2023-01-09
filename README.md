@@ -1,3 +1,31 @@
+### 2023. 01. 09. React Class 와 Fucntion 방법
+#### 학습시작
+##### 클레스 방식 사용자 지정태그 사용 예시 (Header.js)
+
+-----------------------------------------------------------------
+    <Header classname="header" title="헤더입니다잉"></Header>
+-----------------------------------------------------------------
+    class Header extends Conponent{
+        render(){
+            return{
+                <header className={this.props.classname}>{this.props.title}</header>
+                // this.props.classname = header
+                // this.props.title = 헤더입니다잉
+            };
+        }
+    }
+    export default Header;
+
+##### 함수 방식 사용자 지정태그 사용 예시 (Header.js)
+    function Header(props){
+        return (
+            <header className={props.classname}>{props.title}</header>
+            // props.classname = header
+            // props.title = 헤더입니다잉
+        );
+    }
+    export default Header;
+
 ### 2023. 01. 06. React Start with BelugaCurtain
 #### 학습시작
 #### React 구성(기본) / 디렉토리 / react-app / 하위목록

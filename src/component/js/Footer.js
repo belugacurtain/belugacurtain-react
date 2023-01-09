@@ -1,5 +1,3 @@
-import Nav from "./Nav";
-
 function Footer(props) {
     return (
         <footer id="footer">

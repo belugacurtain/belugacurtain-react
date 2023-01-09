@@ -1,5 +1,3 @@
-import Header from "./Header";
-
 function Nav(props) {
     const list = []
     for (let i = 0; i < props.navitemprops.length; i++) {
